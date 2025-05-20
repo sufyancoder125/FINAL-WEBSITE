@@ -15,7 +15,7 @@
   <!-- ===== Header Section ===== -->
   <section class="sub-header">
     <nav>
-      <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+      <a href="index.html"><img src="logo.png" alt="Logo" /></a>
       <div class="nav-links" id="navLinks">
         <ul>
           <li><a href="index.html">HOME</a></li>
@@ -75,7 +75,7 @@
       </div>
 
       <div class="contact-col">
-        <form id="contactForm" action="contactForm" method="post">
+        <form>
           <input type="text" name="name" placeholder="Enter your name" required />
           <input type="email" name="email" placeholder="Enter your email" required />
           <input type="text" name="subject" placeholder="Enter your subject" required />
@@ -123,14 +123,6 @@
     window.onload = () => {
       document.getElementById("closeIcon").style.display = "none";
     };
-
-
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
-      e.preventDefault(); // Stop actual form submission
-      alert("Sir please done my work me – You, Khan Saab");
-      this.reset(); // Optional: reset the form after message
-    });
-
   </script>
 
 </body>
