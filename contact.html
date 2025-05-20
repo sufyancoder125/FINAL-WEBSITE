@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>University Website Design</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== Header Section ===== -->
+  <section class="sub-header">
+    <nav>
+      <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+      <div class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="course.html">COURSE</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fa fa-bars" id="openIcon"></i>
+        <i class="fa fa-times" id="closeIcon"></i>
+      </div>
+    </nav>
+
+    <div class="text-box">
+      <h1>CONTACT US</h1>
+    </div>
+  </section>
+
+  <!-- ===== Location Map Section ===== -->
+  <section class="location">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d924247.143974146!2d66.49594811022504!3d25.191740355949662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e06651d4bbf%3A0x9cf92f44555a0c23!2sKarachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1747634786337!5m2!1sen!2s"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section class="contact-us">
+    <div class="row">
+      <div class="contact-col">
+        <div>
+          <i class="fa fa-home"></i>
+          <span>
+            <h5>Gulshan e Ghazi Road 10 Building</h5>
+            <p>Orangi Town Karachi</p>
+          </span>
+        </div>
+        <div>
+          <i class="fa fa-phone"></i>
+          <span>
+            <h5>+92 317941438</h5>
+            <p>Monday to Friday, 10AM to 6PM</p>
+          </span>
+        </div>
+        <div>
+          <i class="fa-regular fa-envelope" style=" font-size: 28px;
+    color: #f44336;
+    margin: 10px;
+    margin-right: 30px;"></i>
+          <span>
+            <h5>MuhammadSufyan31545@gmail.com</h5>
+            <p>Email Us Your Query</p>
+          </span>
+        </div>
+      </div>
+
+      <div class="contact-col">
+        <form id="contactForm" action="contactForm" method="post">
+          <input type="text" name="name" placeholder="Enter your name" required />
+          <input type="email" name="email" placeholder="Enter your email" required />
+          <input type="text" name="subject" placeholder="Enter your subject" required />
+          <textarea rows="8" name="message" placeholder="Message"></textarea>
+          <button type="submit" class="hero-btn red-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer Section ===== -->
+  <section class="fotter">
+    <h4>ABOUT US</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Mollitia quae dolorum illum exercitationem ratione
+    rerum doloribus facere itaque.<br>Eos debitis ab numquam, illum quis deleniti
+    delectus magni in quo! Odit?</p>
+    <div class="icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <p>Made With <i class="far fa-heart heart-icon" style="color: #f44336;"></i> by Muhammad Sufyan</p>
+  </section>
+
+  <!-- ===== Script for Toggle Menu ===== -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      const openIcon = document.getElementById("openIcon");
+      const closeIcon = document.getElementById("closeIcon");
+
+      nav.classList.toggle("active");
+
+      if (nav.classList.contains("active")) {
+        openIcon.style.display = "none";
+        closeIcon.style.display = "block";
+      } else {
+        openIcon.style.display = "block";
+        closeIcon.style.display = "none";
+      }
+    }
+
+    window.onload = () => {
+      document.getElementById("closeIcon").style.display = "none";
+    };
+
+
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // Stop actual form submission
+      alert("Sir please done my work me – You, Khan Saab");
+      this.reset(); // Optional: reset the form after message
+    });
+
+  </script>
+
+</body>
+</html>
